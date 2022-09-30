@@ -227,21 +227,23 @@ class KeyboardManager extends React.Component {
 
     return (
       <div className='main-content'>
+        <div className='result-area'>
+          <label>Result</label>
+          <textarea className='input-text-area' readOnly value={value} />
+        </div>
         <Select
           options={optionKeyboardDefault}
           value={optionKeyboardDefault[this.state.selectedKeyboard]}
           onChange={this.handleChangeKeyboard.bind(this)}
         />
+        
         <div className='array-area'>
           <table>
             <tbody>
               <Keyboard keyboard={this.state.currentKeyboard} onChange={this.handleChangeKey.bind(this)}/>
             </tbody>
           </table>
-          <div className='result-area'>
-            <label>Result</label>
-            <textarea readOnly value={value}/>
-          </div>
+          
         </div>
       </div>
     );
