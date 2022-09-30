@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/keyboard-configurator/static/css/main.448d7e63.css",
-    "main.js": "/keyboard-configurator/static/js/main.d7b68206.js",
+    "main.css": "/keyboard-configurator/static/css/main.faedb2b6.css",
+    "main.js": "/keyboard-configurator/static/js/main.0f223a73.js",
     "static/js/787.28cb0dcd.chunk.js": "/keyboard-configurator/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/keyboard-configurator/index.html",
-    "main.448d7e63.css.map": "/keyboard-configurator/static/css/main.448d7e63.css.map",
-    "main.d7b68206.js.map": "/keyboard-configurator/static/js/main.d7b68206.js.map",
+    "main.faedb2b6.css.map": "/keyboard-configurator/static/css/main.faedb2b6.css.map",
+    "main.0f223a73.js.map": "/keyboard-configurator/static/js/main.0f223a73.js.map",
     "787.28cb0dcd.chunk.js.map": "/keyboard-configurator/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.448d7e63.css",
-    "static/js/main.d7b68206.js"
+    "static/css/main.faedb2b6.css",
+    "static/js/main.0f223a73.js"
   ]
 }
