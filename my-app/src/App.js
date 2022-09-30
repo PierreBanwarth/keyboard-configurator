@@ -16,6 +16,63 @@ const options = [
   { value: 10, label: 'A#', backgroundColor: '#D2499B', color: '#FEFEFE'},
   { value: 11, label: 'B', backgroundColor: '#EC197A', color: '#F48AA8'},
 ]
+const optionKeyboardDefault = [
+  {
+    value: 0,
+    label: 'Anglo Concertina'
+  }, {
+    value: 1,
+    label: 'Accordéon Chromatique',
+  }, {
+    value: 2,
+    label: 'Accordéon Diatonique (Sol/Do)',
+  }
+]
+
+const instrumentKeyboardData = [
+  [
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+    [{ push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }, { push: 4, pull: 4, octpull: 1, octpush: 1 }],
+  ],
+  [
+    [{ push: 9, pull: 9, octpull: 1, octpush: 1 }, { push: 10, pull: 10, octpull: 1, octpush: 1 }, { push: 11, pull: 11, octpull: 1, octpush: 1 }],
+    [{ push: 0, pull: 0, octpull: 2, octpush: 2 }, { push: 1, pull: 1, octpull: 2, octpush: 2 }, { push: 2, pull: 2, octpull: 2, octpush: 2 }],
+    [{ push: 3, pull: 3, octpull: 2, octpush: 2 }, { push: 4, pull: 4, octpull: 2, octpush: 2 }, { push: 5, pull: 5, octpull: 2, octpush: 2 }],
+    [{ push: 6, pull: 6, octpull: 2, octpush: 2 }, { push: 7, pull: 7, octpull: 2, octpush: 2 }, { push: 8, pull: 8, octpull: 2, octpush: 2 }],
+    [{ push: 9, pull: 9, octpull: 2, octpush: 2 }, { push: 10, pull: 10, octpull: 2, octpush: 2 }, { push: 11, pull: 11, octpull: 2, octpush: 2 }],
+    [{ push: 0, pull: 0, octpull: 3, octpush: 3 }, { push: 1, pull: 1, octpull: 3, octpush: 3 }, { push: 2, pull: 2, octpull: 3, octpush: 3 }],
+    [{ push: 3, pull: 3, octpull: 3, octpush: 3 }, { push: 4, pull: 4, octpull: 3, octpush: 3 }, { push: 5, pull: 5, octpull: 3, octpush: 3 }],
+    [{ push: 6, pull: 6, octpull: 3, octpush: 3 }, { push: 7, pull: 7, octpull: 3, octpush: 3 }, { push: 8, pull: 8, octpull: 3, octpush: 3 }],
+    [{ push: 9, pull: 9, octpull: 3, octpush: 3 }, { push: 10, pull: 10, octpull: 3, octpush: 3 }, { push: 11, pull: 11, octpull: 3, octpush: 3 }],
+    [{ push: 0, pull: 0, octpull: 4, octpush: 4 }, { push: 1, pull: 1, octpull: 4, octpush: 4 }, { push: 2, pull: 2, octpull: 4, octpush: 4 }],
+    [{ push: 3, pull: 3, octpull: 4, octpush: 4 }, { push: 4, pull: 4, octpull: 4, octpush: 4 }, { push: 5, pull: 5, octpull: 4, octpush: 4 }],
+    [{ push: 6, pull: 6, octpull: 4, octpush: 4 }, { push: 7, pull: 7, octpull: 4, octpush: 4 }, { push: 8, pull: 8, octpull: 4, octpush: 4 }],
+  ], [
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+    [{ push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }, { push: 6, pull: 6, octpull: 1, octpush: 1 }],
+  ],
+]
+
 const styles = {
   option: (provided, state) => ({
     ...provided,
@@ -125,62 +182,6 @@ class Keyboard extends React.Component {
     )
   }
 }
-const optionKeyboardDefault = [
-  {
-    value: 0, 
-    label: 'Anglo Concertina'
-  },{
-    value: 1,
-    label: 'Accordéon Chromatique',
-  },{
-    value: 2,
-    label: 'Accordéon Diatonique (Sol/Do)',
-  }
-]
-
-const instrumentKeyboardData = [
-  [
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-    [{ push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}, { push: 4, pull: 4 , octpull : 1, octpush : 1}],
-  ],
-  [
-    [{ push: 9, pull: 9 , octpull : 1, octpush : 1}, { push: 10, pull: 10 , octpull : 1, octpush : 1}, { push: 11, pull: 11 , octpull : 1, octpush : 1}],
-    [{ push: 0, pull: 0 , octpull : 2, octpush : 2}, { push: 1, pull: 1 , octpull : 2, octpush : 2}, { push: 2, pull: 2 , octpull : 2, octpush : 2}],
-    [{ push: 3, pull: 3 , octpull : 2, octpush : 2}, { push: 4, pull: 4 , octpull : 2, octpush : 2}, { push: 5, pull: 5 , octpull : 2, octpush : 2}],
-    [{ push: 6, pull: 6 , octpull : 2, octpush : 2}, { push: 7, pull: 7 , octpull : 2, octpush : 2}, { push: 8, pull: 8 , octpull : 2, octpush : 2}],
-    [{ push: 9, pull: 9 , octpull : 2, octpush : 2}, { push: 10, pull: 10 , octpull : 2, octpush : 2}, { push: 11, pull: 11 , octpull : 2, octpush : 2}],
-    [{ push: 0, pull: 0 , octpull : 3, octpush : 3}, { push: 1, pull: 1 , octpull : 3, octpush : 3}, { push: 2, pull: 2 , octpull : 3, octpush : 3}],
-    [{ push: 3, pull: 3 , octpull : 3, octpush : 3}, { push: 4, pull: 4 , octpull : 3, octpush : 3}, { push: 5, pull: 5 , octpull : 3, octpush : 3}],
-    [{ push: 6, pull: 6 , octpull : 3, octpush : 3}, { push: 7, pull: 7 , octpull : 3, octpush : 3}, { push: 8, pull: 8 , octpull : 3, octpush : 3}],
-    [{ push: 9, pull: 9 , octpull : 3, octpush : 3}, { push: 10, pull: 10 , octpull : 3, octpush : 3}, { push: 11, pull: 11 , octpull : 3, octpush : 3}],
-    [{ push: 0, pull: 0 , octpull : 4, octpush : 4}, { push: 1, pull: 1 , octpull : 4, octpush : 4}, { push: 2, pull: 2 , octpull : 4, octpush : 4}],
-    [{ push: 3, pull: 3 , octpull : 4, octpush : 4}, { push: 4, pull: 4 , octpull : 4, octpush : 4}, { push: 5, pull: 5 , octpull : 4, octpush : 4}],
-    [{ push: 6, pull: 6 , octpull : 4, octpush : 4}, { push: 7, pull: 7 , octpull : 4, octpush : 4}, { push: 8, pull: 8 , octpull : 4, octpush : 4}],
-  ],[
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-    [{ push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}, { push: 6, pull: 6 , octpull : 1, octpush : 1}],
-  ],
-]
 class KeyboardManager extends React.Component {
   constructor(props) {
     super(props);
