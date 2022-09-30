@@ -251,6 +251,15 @@ class KeyboardManager extends React.Component {
 function App() {
   return (
     <div className="App">
+      <div className="image">
+        <img
+          className="logo"
+          src={`${process.env.PUBLIC_URL}/assets/logo.jpg`}
+          alt="Grapefruit slice atop a pile of other slices"></img>
+      </div>
+      <h1 className='title'>Keyboard Configurator</h1>
+      
+      Keyboard Configurator
       <header className="App-header">
         <KeyboardManager></KeyboardManager>
       </header>

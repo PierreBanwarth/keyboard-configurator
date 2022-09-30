@@ -1,14 +1,23 @@
 .App {
   text-align: center;
+  background-color: #061123;
 }
-
-.App-logo {
+.logo{
   height: 40vmin;
   pointer-events: none;
+  background-color: #061123;
+}
+.title{
+  color : #45EAB8;
+  font-size: 70px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
 }
 
+
 .App-header {
-  background-color: #282c34;
+  background-color: #061123;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
