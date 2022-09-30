@@ -3,31 +3,45 @@ import React from 'react';
 import Select from 'react-select';
 
 const options = [
-  {value: 0, label: 'C',  color: '##eff8fc'},
-  {value: 1, label: 'C#', color: '#ceebf5'},
-  {value: 2, label: 'D', color: '#addeef'},
-  {value: 3, label: 'D#', color: '#8cd0e9'},
-  {value: 4, label: 'E', color: '#6bc3e2'},
-  {value: 5, label: 'F', color: '#4ab6dc'},
-  {value: 6, label: 'F#', color: '#2aa9d5'},
-  {value: 7, label: 'G', color: '#238fb5'},
-  {value: 8, label: 'G#', color: '#4#1d7594'},
-  {value: 9, label: 'A', color: '#165b73'},
-  {value: 10, label: 'A#', color: '#104152'},
-  {value: 11, label: 'B', color: '#0a2731'},
+  { value: 0, label: 'C', backgroundColor: '#FBA51A', color: '#FEB74F'},
+  { value: 1, label: 'C#', backgroundColor: '#F4EB20', color: '#C1DD89'},
+  { value: 2, label: 'D', backgroundColor: '#9BCA3C', color: '#8FC975'},
+  { value: 3, label: 'D#', backgroundColor: '#9BCA3C', color: '#8FC975'},
+  { value: 4, label: 'E', backgroundColor: '#71C055', color: '#8DD0B5'},
+  { value: 5, label: 'F', backgroundColor: '#70C5A4', color: '#70C3ED'},
+  { value: 6, label: 'F#', backgroundColor: '#40B8EA', color: '#6783C2'},
+  { value: 7, label: 'G', backgroundColor: '#436FB6', color: '#756BB0'},
+  { value: 8, label: 'G#', backgroundColor: '#5B52A3', color: '#EBE3ED'},
+  { value: 9, label: 'A', backgroundColor: '#87519F', color: '#D671AD'},
+  { value: 10, label: 'A#', backgroundColor: '#D2499B', color: '#FEFEFE'},
+  { value: 11, label: 'B', backgroundColor: '#EC197A', color: '#F48AA8'},
 ]
 const styles = {
   option: (provided, state) => ({
     ...provided,
-    fontWeight: state.isSelected ? "bold" : "normal",
-    color: state.data.color,
-    backgroundColor: state.data.bgcolor,
-    fontSize: state.selectProps.myFontSize
+    color: 'white',
+    backgroundColor: state.data.backgroundColor,
+    
   }),
   singleValue: (provided, state) => ({
     ...provided,
-    color: state.data.color
+    color: 'white',
+    backgroundColor: state.data.backgroundColor,
+    padding :'0 !important',
+  }),
+  valueContainer: (provided, state) => ({
+    ...provided,
+    color: 'white',
+    padding: '0 !important',
+    margin: '0 !important',
+  }),
+  Input: (provided, state) => ({
+    ...provided,
+    color: 'white',
+    padding: '0 !important',
+    margin: '0 !important',
   })
+
 };
 
 const optionOctave = [
@@ -68,6 +82,7 @@ class Key extends React.Component {
       <table>
         <tbody>
           <tr>
+            
             <td>
               <Select className='note-select'  styles={styles} options={options} value={options[this.props.dataKey.pull]} onChange={this.handleChangeNotePull.bind(this)} />
               <Select className='note-select'  styles={styles} options={options} value={options[this.props.dataKey.push]} onChange={this.handleChangeNotePush.bind(this)} />
@@ -170,8 +185,8 @@ class KeyboardManager extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedKeyboard: 0,
-      currentKeyboard: instrumentKeyboardData[0]
+      selectedKeyboard: 1,
+      currentKeyboard: instrumentKeyboardData[1]
     }
   }
 
